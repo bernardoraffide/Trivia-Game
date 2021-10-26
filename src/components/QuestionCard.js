@@ -15,9 +15,6 @@ class QuestionCard extends Component {
           { category }
         </div>
         <div data-testid="question-text" className="question-text">
-          { question }
-        </div>
-        <div data-testid="question-text">
           { parse(question) }
         </div>
       </section>
