@@ -11,6 +11,7 @@ class Header extends Component {
     return (
       <header className="header">
         <img
+          className="image-header"
           alt="foto de perfil"
           data-testid="header-profile-picture"
           src={ gravatarImage }

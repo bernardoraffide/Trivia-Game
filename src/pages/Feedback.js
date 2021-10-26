@@ -14,6 +14,7 @@ class Feedback extends Component {
       <div>
         <Header />
         <section className="feedback-page">
+          <h2 className="title-feedback">Resultado</h2>
           <p data-testid="feedback-total-score" className="score">
             Pontuação final:
             { score }

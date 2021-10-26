@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { FaAngleDoubleRight } from 'react-icons/fa';
 import '../pages/GamePage.css';
 
 class ButtonNext extends Component {
@@ -12,7 +13,8 @@ class ButtonNext extends Component {
         data-testid="btn-next"
         onClick={ handleClick }
       >
-        Próxima  
+        Próxima
+        <FaAngleDoubleRight className="icon-btn-next" />
       </button>
     );
   }

@@ -13,7 +13,7 @@ class QuestionCard extends Component {
         <div data-testid="question-category" className="question-category">
           { category }
         </div>
-        <div data-testid="question-text">
+        <div data-testid="question-text" className="question-text">
           { question }
         </div>
       </section>
