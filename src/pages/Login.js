@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ButtonConfig from '../components/ButtonConfig';
 import { fetchToken } from '../services';
-import './LoginPage.css';
-import image from '../trivia.png';
+import '../styles/LoginPage.css';
+import image from '../images/trivia.png';
 
 class Login extends React.Component {
   constructor() {

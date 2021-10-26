@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import parse from 'html-react-parser';
 import { timeIsOver as timeIsOverAction } from '../actions';
-import '../styles/index.css';
 import Alternative from './Alternative';
+import '../styles/AlternativeCard.css';
 
 const EASY = 1;
 const MEDIUM = 2;
@@ -50,7 +51,6 @@ class AlternativeCard extends Component {
     const array = questions[controller];
     let accum = 0;
     const answers = [array.correct_answer, ...array.incorrect_answers];
-
     return (
       <section>
         {answers.sort().map((answer, index) => {
@@ -63,7 +63,7 @@ class AlternativeCard extends Component {
                 name="incorrect"
                 key={ index }
                 testid={ `wrong-answer-${accum - 1}` }
-                alternative={ answer }
+                alternative={ parse(answer) }
                 handleClick={ (event) => this.handleClick(event) }
               />
             );
@@ -75,7 +75,7 @@ class AlternativeCard extends Component {
               name="correct"
               key={ index }
               testid="correct-answer"
-              alternative={ answer }
+              alternative={ parse(answer) }
               handleClick={ (event) => this.handleClick(event) }
             />
           );
