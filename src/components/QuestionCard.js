@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../pages/GamePage.css';
+import parse from 'html-react-parser';
 
 class QuestionCard extends Component {
   render() {
@@ -15,6 +16,9 @@ class QuestionCard extends Component {
         </div>
         <div data-testid="question-text" className="question-text">
           { question }
+        </div>
+        <div data-testid="question-text">
+          { parse(question) }
         </div>
       </section>
     );
