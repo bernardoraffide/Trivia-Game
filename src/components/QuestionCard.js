@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import parse from 'html-react-parser';
 
 class QuestionCard extends Component {
   render() {
@@ -13,7 +14,7 @@ class QuestionCard extends Component {
           { category }
         </div>
         <div data-testid="question-text">
-          { question }
+          { parse(question) }
         </div>
       </section>
     );

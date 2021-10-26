@@ -40,7 +40,6 @@ class Game extends Component {
       const ranking = JSON.parse(localStorage.getItem('ranking'));
       const { player } = JSON.parse(localStorage.getItem('state'));
       if (!ranking) {
-        console.log('entrou');
         localStorage.setItem('ranking', JSON.stringify({
           players: [player],
         }));
@@ -71,10 +70,8 @@ class Game extends Component {
             <main style={ styles.main }>
               <QuestionCard controller={ controller } />
               <AlternativeCard controller={ controller } />
-              { timeIsOver && <ButtonNext
-                handleClick={ this.handleClick }
-              /> }
-              {timeIsOver ? `timer: ${counter}` : <Timer />}
+              { timeIsOver && <ButtonNext handleClick={ this.handleClick } /> }
+              { timeIsOver ? `timer: ${counter}` : <Timer /> }
             </main>)}
       </>
     );

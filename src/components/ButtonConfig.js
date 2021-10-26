@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { FaCog } from 'react-icons/fa';
-import '../pages/LoginPage.css';
+import '../styles/LoginPage.css';
 
 class ButtonConfig extends Component {
   render() {

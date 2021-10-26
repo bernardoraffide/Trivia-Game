@@ -11,11 +11,23 @@ class Feedback extends Component {
     const MIN_ASSERTIONS = 3;
     return (
       <div>
-        <Header />
-        <p data-testid="feedback-total-score">{ score }</p>
-        <p data-testid="feedback-total-question">{ assertions }</p>
-        <p data-testid="feedback-text">
+        <Header hidden="true" />
+        <h2 data-testid="feedback-text">
           { assertions < MIN_ASSERTIONS ? 'Podia ser melhor...' : 'Mandou bem!' }
+        </h2>
+        <p>
+          Você acertou
+          {' '}
+          <span data-testid="feedback-total-question">{ assertions }</span>
+          {' '}
+          pergunta(s)!
+        </p>
+        <p>
+          E fez
+          {' '}
+          <span data-testid="feedback-total-score">{ score }</span>
+          {' '}
+          pontos!
         </p>
         <PlayAgainButton history={ history } />
         <GoRankingButton history={ history } />
