@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import GoRankingButton from '../components/GoRankingButton';
 import Header from '../components/Header';
 import PlayAgainButton from '../components/PlayAgainButton';
+import './FeedbackPage.css';
 
 class Feedback extends Component {
   render() {
@@ -12,13 +13,24 @@ class Feedback extends Component {
     return (
       <div>
         <Header />
-        <p data-testid="feedback-total-score">{ score }</p>
-        <p data-testid="feedback-total-question">{ assertions }</p>
-        <p data-testid="feedback-text">
-          { assertions < MIN_ASSERTIONS ? 'Podia ser melhor...' : 'Mandou bem!' }
-        </p>
-        <PlayAgainButton history={ history } />
-        <GoRankingButton history={ history } />
+        <section className="feedback-page">
+          <p data-testid="feedback-total-score" className="score">
+            Pontuação final:
+            { score }
+          </p>
+          <p
+            data-testid="feedback-total-question"
+            className="assertions"
+          >
+            Número de acertos:
+            { assertions }
+          </p>
+          <p data-testid="feedback-text" className="feedback-message">
+            { assertions < MIN_ASSERTIONS ? 'Podia ser melhor...' : 'Mandou bem!' }
+          </p>
+          <PlayAgainButton history={ history } />
+          <GoRankingButton history={ history } />
+        </section>
       </div>
     );
   }

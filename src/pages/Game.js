@@ -64,8 +64,10 @@ class Game extends Component {
     const { controller } = this.state;
     const { loading, timeIsOver, counter } = this.props;
     return (
-      <>
-        <Header />
+      <div>
+        <header>
+          <Header />
+        </header>
         { loading ? <span>loading</span>
           : (
             <main style={ styles.main }>
@@ -76,7 +78,7 @@ class Game extends Component {
               /> }
               {timeIsOver ? `timer: ${counter}` : <Timer />}
             </main>)}
-      </>
+      </div>
     );
   }
 }

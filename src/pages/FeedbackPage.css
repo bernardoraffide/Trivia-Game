@@ -1,0 +1,17 @@
+.feedback-page {
+  background-color: rgb(191, 194, 191);
+  border-radius: 10px;
+  border-style: double;
+  border-width: 15px;
+  margin: auto;
+  margin-top: 60px;
+  padding: 30px;
+  width: 50%;
+}
+.score, .assertions, .feedback-message {
+  text-align: center;
+}
+
+.button {
+  margin-left: 550px;
+}

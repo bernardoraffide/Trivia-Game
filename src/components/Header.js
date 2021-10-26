@@ -1,5 +1,6 @@
 import md5 from 'crypto-js/md5';
 import React, { Component } from 'react';
+import '../pages/GamePage.css';
 
 class Header extends Component {
   render() {
@@ -8,17 +9,17 @@ class Header extends Component {
     const emailHash = md5(gravatarEmail).toString();
     const gravatarImage = `https://www.gravatar.com/avatar/${emailHash}`;
     return (
-      <header>
+      <header className="header">
         <img
           alt="foto de perfil"
           data-testid="header-profile-picture"
           src={ gravatarImage }
         />
-        <h1 data-testid="header-player-name">{ name }</h1>
-        <p>
+        <h2 data-testid="header-player-name" className="name-header">{ name }</h2>
+        <h3 className="poits-header">
           Pontos:
           <span data-testid="header-score">{score}</span>
-        </p>
+        </h3>
       </header>
     );
   }
