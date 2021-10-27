@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { FaStopwatch } from 'react-icons/fa';
 import { timeIsOver as timeIsOverAction } from '../actions';
+import '../pages/GamePage.css';
 
 class Timer extends Component {
   constructor() {
@@ -37,7 +39,12 @@ class Timer extends Component {
 
   render() {
     const { counter } = this.state;
-    return <div>{ `Timer: ${counter}` }</div>;
+    return (
+      <div className="timer">
+        { `Timer: ${counter}` }
+        <FaStopwatch className="icon-timer" />
+      </div>
+    );
   }
 }
 

@@ -52,7 +52,7 @@ class AlternativeCard extends Component {
     let accum = 0;
     const answers = [array.correct_answer, ...array.incorrect_answers];
     return (
-      <section>
+      <section className="alternative-section">
         {answers.sort().map((answer, index) => {
           if (array.incorrect_answers.includes(answer)) {
             accum += 1;

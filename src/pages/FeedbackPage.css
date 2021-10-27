@@ -1,0 +1,53 @@
+.feedback-page {
+  background-color: rgba(191, 194, 191, 0.253);
+  border-radius: 10px;
+  border-style: double;
+  border-width: 15px;
+  margin: auto;
+  margin-top: 60px;
+  padding: 30px;
+  width: 50%;
+}
+
+.score, .assertions, .feedback-message {
+  text-align: center;
+}
+
+.button {
+  margin-left: 550px;
+}
+
+.title-feedback {
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 200;
+  text-align: center;
+}
+
+.button-ranking, .button-play-again {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-play-again {
+  margin-left: 280px;
+}
+
+.button-ranking {
+  margin-left: 308px;
+}
+
+.button-ranking:hover {
+  font-size: 15px;
+}
+
+.button-play-again:hover {
+  font-size: 15px;
+}
+
+.return, .icon-ranking {
+  font-size: 18px;
+  margin-left: 5px;
+}

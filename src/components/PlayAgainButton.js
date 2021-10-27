@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../pages/FeedbackPage.css';
+import { FaRedoAlt } from 'react-icons/fa';
 
 class PlayAgainButton extends Component {
   constructor() {
@@ -16,11 +18,13 @@ class PlayAgainButton extends Component {
     return (
       <div>
         <button
+          className="button-play-again"
           type="button"
           data-testid="btn-play-again"
           onClick={ this.handleClick }
         >
           Jogar novamente
+          <FaRedoAlt className="return" />
         </button>
       </div>
     );

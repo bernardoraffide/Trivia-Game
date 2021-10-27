@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../pages/FeedbackPage.css';
+import { FaMedal } from 'react-icons/fa';
 
 class GoRankingButton extends Component {
   constructor() {
@@ -15,11 +17,13 @@ class GoRankingButton extends Component {
   render() {
     return (
       <button
+        className="button-ranking"
         type="button"
         data-testid="btn-ranking"
         onClick={ this.handleClick }
       >
         Ranking
+        <FaMedal className="icon-ranking" />
       </button>
     );
   }

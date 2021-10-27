@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { thunkQuestions, timeIsOver as timeIsOverAction } from '../actions';
 import AlternativeCard from '../components/AlternativeCard';
 import ButtonNext from '../components/ButtonNext';
-import Header from '../components/Header';
 import QuestionCard from '../components/QuestionCard';
 import Timer from '../components/Timer';
+import Header from '../components/Header';
 
 class Game extends Component {
   constructor() {
@@ -63,8 +63,10 @@ class Game extends Component {
     const { controller } = this.state;
     const { loading, timeIsOver, counter } = this.props;
     return (
-      <>
-        <Header />
+      <div>
+        <header>
+          <Header />
+        </header>
         { loading ? <span>loading</span>
           : (
             <main style={ styles.main }>
@@ -73,7 +75,7 @@ class Game extends Component {
               { timeIsOver && <ButtonNext handleClick={ this.handleClick } /> }
               { timeIsOver ? `timer: ${counter}` : <Timer /> }
             </main>)}
-      </>
+      </div>
     );
   }
 }
